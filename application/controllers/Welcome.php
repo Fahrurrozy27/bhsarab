@@ -203,6 +203,7 @@ class Welcome extends CI_Controller
                 $data = [
 
                     'email' => $user['email'],
+                    'nama' => $user['nama'],
                     'nama_guru' => $user['nama_guru'],
 
                 ];
