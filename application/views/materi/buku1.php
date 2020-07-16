@@ -91,14 +91,13 @@ echo $data['user']['nama'];
             style="width: 100%; border-radius:10px;">
             <div class="row" style="color: black; font-family: 'poppins';">
                 <div class="col-md-12 mt-1 text-center">
-                    <h1 class="display-4" data-aos="fade-down" data-aos-duration="1400">Kelas Bahasa Arab - Buku Pertama !
-                    </h1>
-                    <h4 data-aos="fade-down" data-aos-duration="1700"><?php
-$data['user'] = $this->db->get_where('siswa', ['email' =>
-    $this->session->userdata('email')])->row_array();
-echo $data['user']['nama'];
-?> - Papan Tulis</h4>
-                    <p>Kelas Bahasa Arab - Buku Pertama</p>
+                    <!-- <h2 class="display-4" data-aos="fade-down" data-aos-duration="1400">Kelas Bahasa Arab - Buku Pertama
+                    </h2> -->
+                    <h2 data-aos="fade-down" data-aos-duration="1700"><?php
+                        $data['user'] = $this->db->get_where('siswa', ['email' =>
+                        $this->session->userdata('email')])->row_array();
+                        echo $data['user']['nama'];?></h2>
+                    <h3>Kelas Bahasa Arab - Buku Pertama</h3>
                     <hr width="80%">
                     <p data-aos="fade-down" class="font-weight-bold" data-aos-duration="1800">Silahkan pilih materi yang
                         akan kamu akses
@@ -119,7 +118,7 @@ echo $data['user']['nama'];
             <div class="col-md-12 mb-4" data-aos="fade-down" data-aos-duration="1200">
                 <div class="card materi w-150 border-0">
                     <div class="card-body col-md-12 mt-1">
-                        <h1 class="card-title"><?=$u->nama_guru;?></h1>
+                        <h1 class="card-title"><?=$u->nama_bab;?></h1>
                         <p class=" card-text">
                             <?=substr($u->deskripsi, 0, 100);?>&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.
                         </p>

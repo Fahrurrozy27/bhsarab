@@ -30,10 +30,10 @@ dan guru dapat terus belajar dan mengajar dimana saja dan kapan saja.
             </div>
             <div class="col-lg-2  col-md-6 col-sm-6">
                 <div class="single-footer-widget tp_widgets">
-                    <h6 class="footer_title">Masuk - Sign in</h6>
+                    <h6 class="footer_title"> <a href="<?=base_url('welcome')?>" data-toggle="modal" data-target="#exampleModalCenter">Masuk - Sign in</a></h6>
                     <ul class="list">
-                        <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Untuk Siswa</a></li>
-                        <li><a href="<?=base_url('welcome/guru')?>">Untuk Guru</a></li>
+                        <!-- <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Untuk Siswa</a></li>
+                        <li><a href="<?=base_url('welcome/guru')?>">Untuk Guru</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -42,14 +42,14 @@ dan guru dapat terus belajar dan mengajar dimana saja dan kapan saja.
                     <h6 class="footer_title">MATERI</h6>
                     <ul class="list">
                         <li><a href="javaScript:void(0);">BAHASA ARAB</a></li>
-                        <li><a href="javaScript:void(0);">Matematika</a></li>
+                        <!-- <li><a href="javaScript:void(0);">Matematika</a></li>
                         <li><a href="javaScript:void(0);">Bahasa Indonesia</a></li>
                         <li><a href="javaScript:void(0);">Bahasa Inggris</a></li>
-                        <li><a href="javaScript:void(0);">Pendidikan Agama Islam</a></li>
+                        <li><a href="javaScript:void(0);">Pendidikan Agama Islam</a></li> -->
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2  col-md-6 col-sm-6">
+            <!-- <div class="col-lg-2  col-md-6 col-sm-6">
                 <div class="single-footer-widget tp_widgets">
                     <h6 class="footer_title">Tentang Developer</h6>
                     <ul class="list">
@@ -66,24 +66,23 @@ dan guru dapat terus belajar dan mengajar dimana saja dan kapan saja.
                     kosong atau pun keadaan yang tidak terduga apapun karena Learnify dapat diakses dimana saja dan
                     kapan saja untuk belajar.
                 </p>
-            </div>
+            </div> -->
         </div>
         <div class="row footer-bottom d-flex justify-content-between align-items-center">
             <p class="col-lg-8 col-md-8 footer-text m-0">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Thank you colorlib for allow me to use this template. <br> Copyright &copy;<script>
+                Papan Tulis <br> Copyright &copy;<script>
                 document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <span class="text-danger"> &#10084;</span> by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a> <br>
-                Made with <span class="text-danger"> &#10084;</span> by syaauqi
+                </script> All rights reserved <span class="text-danger"></span> by
+                <a href="http://papantulis.net" target="_blank">Papan Tulis</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
-            <div class="col-lg-4 col-md-4 footer-social">
+            <!-- <div class="col-lg-4 col-md-4 footer-social">
                 <a href="https://www.facebook.com/zaidan.syauqi.9"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/syauqykhairan"><i class="fa fa-twitter"></i></a>
                 <a href="https://dribbble.com/syauqyzaidan"><i class="fa fa-dribbble"></i></a>
                 <a href="https://www.behance.net/syaauqizaaidan"><i class="fa fa-behance"></i></a>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>

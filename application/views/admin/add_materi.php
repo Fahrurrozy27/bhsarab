@@ -110,7 +110,7 @@ echo $data['user']['username'];
 
                             </ul>
                         </li>
-                        <li class="menu-header">About Developer</li>
+                        <!-- <li class="menu-header">About Developer</li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-address-card"></i>
                                 <span>Developer</span></a>
@@ -122,7 +122,7 @@ echo $data['user']['username'];
                                         Learnify</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                 </aside>
             </div>
             <!-- End Sidebar -->
@@ -171,12 +171,12 @@ echo $data['user']['username'];
                                                         klik guru yang akan dipilih.</small>
                                                     <datalist id=nama_guru>
                                                         <?php
-include "koneksi.php";
-$qry = mysqli_query($koneksi, "SELECT nama_guru From guru");
-while ($t = mysqli_fetch_array($qry)) {
-    echo "<option value='$t[nama_guru]'>";
-}
-?>
+                                                            include "koneksi.php";
+                                                            $qry = mysqli_query($koneksi, "SELECT nama_guru From guru");
+                                                            while ($t = mysqli_fetch_array($qry)) {
+                                                                echo "<option value='$t[nama_guru]'>";
+                                                            }
+                                                        ?>
                                                     </datalist>
                                                 </div>
                                             </div>
@@ -192,16 +192,25 @@ while ($t = mysqli_fetch_array($qry)) {
                                                     disana.</small>
                                             </div>
                                             <div class="form-group">
-                                                <div class="input-group">
+                                                <label for="inputEmail4">Judul Bab</label>
+                                                <textarea class="form-control" required name="nama_bab"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail4">Tambah Video</label>
+                                                <textarea class="form-control" required name="video"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                                <!-- <div class="input-group">
                                                     <div class="custom-file">
-                                                        <input required type="file" name="video" required
+                                                        <input required type="video" name="video" required
                                                             class="custom-file-input" id="inputGroupFile01"
                                                             aria-describedby="inputGroupFileAddon01">
                                                         <label class="custom-file-label" for="inputGroupFile01">Upload
                                                             Video
                                                             Materi Disini</label>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleFormControlTextarea1">Deskripsi Materi</label>

@@ -94,7 +94,7 @@
 
   <section class="row no-gutters p-0 bg-primary min-vh-100 true">
     <div class="col-lg-12">
-      <section class="p-0 bg-primary text-white true">
+      <section class="p-0 bg-gradient text-white">
         <div class="container min-vh-lg-100 d-flex flex-column justify-content-between text-center py-4 py-md-5">
           <a href="index.html" class="fade-page">
             <img src="assets/img/logos/jumpstart.svg" alt="Jumpstart" data-inject-svg class="bg-white">
@@ -103,15 +103,47 @@
             <div class="col-xl-7 col-lg-8">
               <h1 class="h2 text-center mb-lg-5">Masuk - أدخل</h1>
               <div class="card card-body shadow text-left text-dark">
-                <form action="<?= base_url('welcome/validateLogin') ?>" method="post">
+              <form action="<?=base_url('welcome/validateLogin')?>" method="post">
+                                <div class="form-group">
+                                    <label class="label-font" for="
+                                        exampleFormControlInput1">
+                                        Email</label>
+                                    <input type="text" value="<?=set_value('email');?>" class="form-control"
+                                        name="email" autocomplete="off" id="email"
+                                        placeholder="Masukan email mu disini ..">
+                                        <small class="text-danger"></small>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label-font" for="
+                                        exampleFormControlInput1">
+                                        Password</label>
+                                    <input type="password" name="password" class="form-control" id="password"
+                                        placeholder="Masukan password mu disini ..">
+                                    <small class="text-danger"></small>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Ingat saya.
+                                    </label>
+                                </div>
+                                <p class="terms">Dengan login anda
+                                    menyetujui
+                                    <i>privasi dan persyaratan ketentuan
+                                        hukum kami </i> .
+                                    belum punya akun? daftar <a href=" <?=base_url('user/registration')?>">
+                                        disini.</a>
+                                </p>
+                                <button class="btn btn-primary-2 btn-block">Masuk - أدخل</button>
+                            </form>
+                <!-- <form action="<?= base_url('welcome/validateLogin') ?>" method="post">
                   <div class="form-group">
                     <label class="label-font" for="exampleFormControlInput1">Email</label>
                     <input type="text" value="<?= set_value('email'); ?>" class="form-control" autocomplete="off" id="email" placeholder="Email Address - عنوان البريد الالكترونى">
+                  
                   </div>
                   <div class="form-group">
-                    <label class="label-font" for="
-                                        exampleFormControlInput1">
-                      Password</label>
+                    <label class="label-font" for="exampleFormControlInput1">Password</label>
                     <input type="password" name="password" class="form-control" id="password" placeholder="Password - كلمه السر">
                     <div class="text-right text-small mt-2"> <small class="text-danger"></small>
                       <a href="lupa.html">Lupa Password?</a>
@@ -126,12 +158,12 @@
                   <!-- <button class="btn btn-block btn-success btn-lg btn-icon icon-right" tabindex="4">
                     Masuk - أدخل
                   </button> -->
-                  <button class="btn btn-primary-2 btn-block" type="submit">Masuk - أدخل</button> 
-                </form>
+                  <!-- <button class="btn btn-primary-2 btn-block">Masuk - أدخل</button>  -->
+                <!-- </form>  -->
               </div>
-              <div class="text-center text-small mt-3">
-                Tidak mempunyai akun? <br><a class="text-white" href="signup.html">Daftar disini</a></br>
-              </div>
+              <!-- <div class="text-center text-small mt-3">
+              belum punya akun? daftar <strong><a href=" <?=base_url('user/registration')?>">disini.</a></strong>
+              </div> -->
             </div>
           </div>
           <div>

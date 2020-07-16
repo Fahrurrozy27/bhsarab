@@ -155,7 +155,7 @@ echo $data['user']['nama'];
                         data-aos="fade-right">
                         <a href="<?=base_url('user/bhsarab')?>">
                             <div class="card-kelas text-center">
-                                <img src="<?=base_url('assets/')?>img/kelas10.png" style="object-fit: cover;"
+                                <img src="<?=base_url('assets/')?>img/bhsarab.png" style="object-fit: cover;"
                                     class="card-img-top img-fluid" alt="...">
                             </div>
                         </a>

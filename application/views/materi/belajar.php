@@ -104,12 +104,9 @@ echo $data['user']['nama'];
                     echo $data['user']['nama'];
                     ?> - Papan Tulis</h3>
                         <p>Bahasa Arab - Buku 1</p>
-                        <hr align="left" width="600;">
+                        <hr align="left" width="600;"> </hr>
                         <p style="line-height: 3px;">Kita akan mempelajari tentang</p>
-                        <p class="font-weight-bold mt--5">
-                            <?=substr($detail->deskripsi, 0, 120);?>
-
-                        </p>
+                        <pre class="font-weight-bold mt--5" style="line-height: 20px;;"><?=$detail->deskripsi;?></pre> 
                 </div>
             </div>
         </div>
@@ -118,13 +115,20 @@ echo $data['user']['nama'];
 
 
     <!-- Start Video Player -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-12 mx-auto mt-4">
                 <video class="afterglow" autoplay id="myvideo" width="1280" height="720">
                     <source type="video/mp4" autoplay
                         src="<?=base_url() . 'assets/materi_video/' . $detail->video;?>" />
                 </video>
+            </div>
+        </div>
+    </div> -->
+   <div class="container">
+        <div class="row mt-4">
+            <div class="embed-responsive embed-responsive-16by9" id="myvideo" data-aos="fade-down" data-aos-duration="1400">
+            <iframe src="<?php echo $detail->video; ?>" frameborder="0" allowfullscreen allow="encrypted-media" ></iframe>'; 
             </div>
         </div>
     </div>
@@ -138,9 +142,10 @@ echo $data['user']['nama'];
                         <h1 class="card-text"><?=$detail->nama_mapel;?></h1>
                         <!-- <h2 class="card-title display-4"><?=$detail->nama_guru;?></h2> -->
                         <hr style="background-color: white;">
-                        <!-- <h5 class="card-text"><?=$detail->nama_mapel;?></h5> -->
-                        <h5 class="card-title display-4"><?=$detail->nama_guru;?></h5>
-                        <p class="card-text"> Deskripsi materi pelajaran : <br> <?=$detail->deskripsi;?></p>
+                        <h5 class="card-text"><?=$detail->nama_mapel;?></h5>
+                        <h5 class="card-title display-4"><?=$detail->nama_bab;?></h5>
+                        <p class="card-text"> Deskripsi materi pelajaran :       </p>
+                        <pre class="card-text" style="color: black; font-family:'poppins';"> <?=$detail->deskripsi;?>  </pre>
                     </div>
                 </div>
             </div>
@@ -158,7 +163,7 @@ echo $data['user']['nama'];
             <div class="col-md-12">
                 <div class="card komen w-150 border-0">
                     <div class="card-body p-5" style="font-family: 'Poppins', sans-serif !important;">
-                        <h1 style="color: black; font-size:44px !important;">Apa komentarmu ?</h1>
+                        <h1 style="color: black; font-size:44px !important;">Diskusi yuk!</h1>
                         <br>
                         <?php echo $disqus ?>
                     </div>

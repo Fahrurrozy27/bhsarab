@@ -98,9 +98,9 @@ echo $data['user']['nama'];
             <div class="row" style="color: black; font-family: 'poppins';">
                 <div class="col-md-12 mt-1">
                     <h1 class="display-4" style="color: black; font-family:'poppins';" data-aos="fade-down"
-                        data-aos-duration="1400">Silahkan pilih materi bahasa arab !
+                        data-aos-duration="1400">Silahkan anda mulai dari materi bahasa arab 1 !
                     </h1>
-                    <p>Alhamdulillah anda telah memasuki bagian materi bahasa arab, <br>Materi bahasa arab dibagi menjadi 3 bagian, silahkan pilih bagian yang akan anda pelajari atau klik lanjutkan untuk melanjutkan belajar
+                    <p>Alhamdulillah anda telah memasuki bagian materi bahasa arab, <br>Materi bahasa arab dibagi menjadi 3 bagian, klik lanjutkan untuk melanjutkan belajar
                        </p>
                     <hr>
 
@@ -123,21 +123,21 @@ echo $data['user']['nama'];
             <div class="col-md-4 mb-2 d-flex justify-content-center" data-aos-duration="1900" data-aos="fade-right">
                 <a href="<?=base_url('materi/buku1')?>">
                     <div class="card-kelas">
-                        <img src="<?=base_url('assets/')?>img/matematika.png" class="card-img-top" alt="...">
+                        <img src="<?=base_url('assets/')?>img/bhsarab1.png" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-2 d-flex justify-content-center" data-aos-duration="1900" data-aos="fade-down">
                 <a href="<?=base_url('materi/buku2')?>">
-                    <div class="card-kelas">
-                        <img src="<?=base_url('assets/')?>img/ipa.png" class="card-img-top" alt="...">
+                    <div class="card-kelas" opacity="0.7">
+                        <img src="<?=base_url('assets/')?>img/bhsarab2.png" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-2 d-flex justify-content-center" data-aos-duration="1900" data-aos="fade-left">
                 <a href="<?=base_url('materi/buku3')?>">
                     <div class="card-kelas">
-                        <img src="<?=base_url('assets/')?>img/Bahasa Indonesia.png" class="card-img-top" alt="...">
+                        <img src="<?=base_url('assets/')?>img/bhsarab3.png" class="card-img-top" alt="...">
                     </div>
                 </a>
             </div>

@@ -363,18 +363,18 @@ echo $data['user']['nama_guru'];
                                         <div class="form-group col-md-12">
                                             <label for="inputEmail4">Nama Guru</label>
                                             <input required type="text" readonly name="nama_guru" value="<?php
-$data['user'] = $this->db->get_where('guru', ['email' =>
-    $this->session->userdata('email')])->row_array();
-echo $data['user']['nama_guru'];?>" class="form-control" id="inputEmail4">
+                                                $data['user'] = $this->db->get_where('guru', ['email' =>
+                                                    $this->session->userdata('email')])->row_array();
+                                                echo $data['user']['nama_guru'];?>" class="form-control" id="inputEmail4">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <label for="inputEmail4">Nama Mata Pelajaran</label>
                                             <input required type="text" readonly name="nama_mapel" value="<?php
-$data['user'] = $this->db->get_where('guru', ['email' =>
-    $this->session->userdata('email')])->row_array();
-echo $data['user']['nama_mapel'];?>" class="form-control" id="inputEmail4">
+                                                $data['user'] = $this->db->get_where('guru', ['email' =>
+                                                    $this->session->userdata('email')])->row_array();
+                                                echo $data['user']['nama_mapel'];?>" class="form-control" id="inputEmail4">
                                         </div>
                                     </div>
                                     <div class="form-group">

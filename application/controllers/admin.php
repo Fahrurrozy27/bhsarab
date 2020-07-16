@@ -298,28 +298,30 @@ class Admin extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('admin/add_materi');
         } else {
-            $upload_video = $_FILES['video'];
+            // $upload_video = $_FILES['video'];
 
-            if ($upload_video) {
-                $config['allowed_types'] = 'mp4|mkv|mov';
-                $config['max_size'] = '0';
-                $config['upload_path'] = './assets/materi_video';
+            // if ($upload_video) {
+            //     $config['allowed_types'] = 'mp4|mkv|mov';
+            //     $config['max_size'] = '0';
+            //     $config['upload_path'] = './assets/materi_video';
 
-                $this->load->library('upload', $config);
+            //     $this->load->library('upload', $config);
 
-                if ($this->upload->do_upload('video')) {
-                    $video = $this->upload->data('file_name');
-                } else {
-                    $this->upload->display_errors();
-                }
+            //     if ($this->upload->do_upload('video')) {
+            //         $video = $this->upload->data('file_name');
+            //     } else {
+            //         $this->upload->display_errors();
+            //     }
 
-            }
+            // }
             $data = [
                 'nama_guru' => htmlspecialchars($this->input->post('nama_guru', true)),
                 'nama_mapel' => htmlspecialchars($this->input->post('nama_mapel', true)),
-                'video' => $video,
+                'video' => htmlspecialchars($this->input->post('video', true)),
+                // 'video' => $video,
                 'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true)),
                 'kelas' => htmlspecialchars($this->input->post('kelas', true)),
+                'nama_bab' => htmlspecialchars($this->input->post('nama_bab', true)),
             ];
 
             $this->db->insert('materi', $data);

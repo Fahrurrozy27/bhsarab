@@ -60,7 +60,7 @@ class User extends CI_Controller
     public function registration()
     {
         $this->load->view('user/registration');
-        $this->load->view('template/footer');
+        //$this->load->view('template/footer');
     }
 
     public function registration_act()

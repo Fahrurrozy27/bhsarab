@@ -89,13 +89,14 @@ CREATE TABLE `materi` (
   `video` varchar(255) NOT NULL,
   `deskripsi` varchar(1024) NOT NULL,
   `kelas` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nama_bab` varchar(128) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_unicode_ci;
 
 --
 -- Dumping data untuk tabel `materi`
 --
 
-INSERT INTO `materi` (`id`, `nama_guru`, `nama_mapel`, `video`, `deskripsi`, `kelas`) VALUES
+INSERT INTO `materi` (`id`, `nama_guru`, `nama_mapel`, `video`, `deskripsi`, `kelas`, 'nama_bab') VALUES
 (79, 'Ust Roz', 'Bahasa Arab', 'Untitled_design1.mp4', 'PELAJARAN BHS ARAB 1', 'X'),
 (80, 'Ust Assas', 'Bahasa Arab 3', 'Untitled_design2.mp4', 'BELAJAR BAHASA ARAB BAGIAN 3', 'XII'),
 (81, 'Ust Assasudin', 'Bahasa Arab 2', 'Untitled_design3.mp4', 'BELAJAR MATERI BAHASA ARAB 2', 'XI');
