@@ -42,7 +42,7 @@ class M_materi extends CI_Model
         $kelas = 'X';
         $this->db->where('kelas', $kelas);
         $this->db->where('nama_mapel', $mapel);
-        $this->db->where('status', 's');
+        // $this->db->where('status', 's');
         return $this->db->get('materi');
     }
 

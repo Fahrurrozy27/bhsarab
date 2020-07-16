@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Jul 2020 pada 04.40
+-- Waktu pembuatan: 16 Jul 2020 pada 07.30
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -62,7 +62,8 @@ CREATE TABLE `guru` (
 INSERT INTO `guru` (`nip`, `email`, `nama_guru`, `password`, `nama_mapel`) VALUES
 (92093, '34@com.com', 'Ust Assas', '$2y$10$2y.GiucFApAlR1fNiybNy.Cfg8gbD8kIAlRYmAPBT0gB8I5mW6tnq', 'Bahasa Arab 3'),
 (1234578, '33@com.com', 'Ust Assasudin', '$2y$10$Jz0osFmWtzldU7qvyAhpWO/A1GVqP1KXdyZbzvCCJsDACT3aTWyGC', 'Bahasa Arab 2'),
-(2147483647, '2@com.com', 'Ust Roz', '$2y$10$x5rBKlvzNX.VQTK1TqM/AuzeBqFC5Hivfjksp4u/RR9Wkhl6P6wjy', 'Bahasa Arab');
+(123123123, 'cok@cok.com', 'Rozy', '$2y$10$EQARNSnb9A6rg/xMF7VxserYJTuowQB7y3UPFhRgDq1/eWhX4j8AC', 'Bahasa Arab'),
+(2147483647, '2@com.com', 'Ustadz Muhammad Asasuddin', '$2y$10$x5rBKlvzNX.VQTK1TqM/AuzeBqFC5Hivfjksp4u/RR9Wkhl6P6wjy', 'Bahasa Arab');
 
 -- --------------------------------------------------------
 
@@ -84,22 +85,25 @@ CREATE TABLE `kelas` (
 
 CREATE TABLE `materi` (
   `id` int(11) NOT NULL,
-  `nama_guru` varchar(128) NOT NULL,
-  `nama_mapel` varchar(128) NOT NULL,
-  `video` varchar(255) NOT NULL,
-  `deskripsi` varchar(1024) NOT NULL,
-  `kelas` varchar(128) NOT NULL
-  `nama_bab` varchar(128) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8_unicode_ci;
+  `nama_guru` varchar(128) CHARACTER SET latin1 NOT NULL,
+  `nama_mapel` varchar(128) CHARACTER SET latin1 NOT NULL,
+  `video` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `deskripsi` varchar(1024) CHARACTER SET latin1 NOT NULL,
+  `kelas` varchar(128) CHARACTER SET latin1 NOT NULL,
+  `nama_bab` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'b'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data untuk tabel `materi`
 --
 
-INSERT INTO `materi` (`id`, `nama_guru`, `nama_mapel`, `video`, `deskripsi`, `kelas`, 'nama_bab') VALUES
-(79, 'Ust Roz', 'Bahasa Arab', 'Untitled_design1.mp4', 'PELAJARAN BHS ARAB 1', 'X'),
-(80, 'Ust Assas', 'Bahasa Arab 3', 'Untitled_design2.mp4', 'BELAJAR BAHASA ARAB BAGIAN 3', 'XII'),
-(81, 'Ust Assasudin', 'Bahasa Arab 2', 'Untitled_design3.mp4', 'BELAJAR MATERI BAHASA ARAB 2', 'XI');
+INSERT INTO `materi` (`id`, `nama_guru`, `nama_mapel`, `video`, `deskripsi`, `kelas`, `nama_bab`, `status`) VALUES
+(80, 'Ust Assas', 'Bahasa Arab 3', 'Untitled_design2.mp4', 'BELAJAR BAHASA ARAB BAGIAN 3', 'XII', NULL, 'b'),
+(81, 'Ust Assasudin', 'Bahasa Arab 2', 'Untitled_design3.mp4', 'BELAJAR MATERI BAHASA ARAB 2', 'XI', NULL, 'b'),
+(82, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/oc4hAdOEcSs', 'ISIM ISYARAH LIL QORIB ??? - Mengenal isim isyarah dalam bentuk jumlah ismiyah\r\n\r\nMenggunakan isim isyarah untuk menunjuk benda mati mudzakkar dekat\r\nMenggunakan Isim Isyarah untuk menunjuk hewan mudzakkar dekat\r\nMenyusun kalimat sempurna dengan isim isyarah\r\nMenguasai (hafal, mengetahui artinya, mampu menulis) kosakata yang ditunjuk isim isyarah', 'X', NULL, 'b'),
+(89, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/sMei5bZu4GU', 'TEST', 'X', NULL, 'b'),
+(90, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/AhnQzpmVYEU', 'anda akan mempelajari tentang materi 1 2 3 4', 'X', 'BAB 1, tentang isim ', 's');
 
 -- --------------------------------------------------------
 
@@ -185,7 +189,7 @@ ALTER TABLE `token`
 -- AUTO_INCREMENT untuk tabel `materi`
 --
 ALTER TABLE `materi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT untuk tabel `siswa`
