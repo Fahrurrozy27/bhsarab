@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2020 pada 07.30
+-- Waktu pembuatan: 18 Jul 2020 pada 13.06
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -103,7 +103,8 @@ INSERT INTO `materi` (`id`, `nama_guru`, `nama_mapel`, `video`, `deskripsi`, `ke
 (81, 'Ust Assasudin', 'Bahasa Arab 2', 'Untitled_design3.mp4', 'BELAJAR MATERI BAHASA ARAB 2', 'XI', NULL, 'b'),
 (82, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/oc4hAdOEcSs', 'ISIM ISYARAH LIL QORIB ??? - Mengenal isim isyarah dalam bentuk jumlah ismiyah\r\n\r\nMenggunakan isim isyarah untuk menunjuk benda mati mudzakkar dekat\r\nMenggunakan Isim Isyarah untuk menunjuk hewan mudzakkar dekat\r\nMenyusun kalimat sempurna dengan isim isyarah\r\nMenguasai (hafal, mengetahui artinya, mampu menulis) kosakata yang ditunjuk isim isyarah', 'X', NULL, 'b'),
 (89, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/sMei5bZu4GU', 'TEST', 'X', NULL, 'b'),
-(90, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/AhnQzpmVYEU', 'anda akan mempelajari tentang materi 1 2 3 4', 'X', 'BAB 1, tentang isim ', 's');
+(90, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/AhnQzpmVYEU', 'anda akan mempelajari tentang materi 1 2 3 4', 'X', 'BAB 1, tentang isim ', 's'),
+(91, 'Ustadz Muhammad Asasuddin', 'Bahasa Arab', 'https://www.youtube.com/embed/F4ksbUBtkkc', 'Fail adalah', 'X', 'BAB 2, Tentang Isim ', 'b');
 
 -- --------------------------------------------------------
 
@@ -189,7 +190,7 @@ ALTER TABLE `token`
 -- AUTO_INCREMENT untuk tabel `materi`
 --
 ALTER TABLE `materi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT untuk tabel `siswa`
